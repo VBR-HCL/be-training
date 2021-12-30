@@ -68,7 +68,7 @@ public class ProductControllerTest extends AbstractSpringIntegrationTest {
 
     @Test
     public void test_getProductById() throws Exception {
-        final Long productId = 1L;
+        final Long productId = productRepository.findAll().get(0).getId();
         final MvcResult mvcResult = mockMvc.perform(get(BASE_URL + "/" + productId))
                 .andExpect(status().isOk())
                 .andReturn();
