@@ -1,7 +1,8 @@
 package com.hcl.poc.service.impl;
 
-import com.hcl.poc.api.model.GroupCreate;
-import com.hcl.poc.api.model.GroupResponse;
+import com.hcl.poc.api.model.exception.NotFoundException;
+import com.hcl.poc.api.model.group.GroupCreate;
+import com.hcl.poc.api.model.group.GroupResponse;
 import com.hcl.poc.entity.Group;
 import com.hcl.poc.mapper.GroupMapper;
 import com.hcl.poc.repository.GroupRepository;
@@ -33,7 +34,8 @@ public class GroupServiceImpl implements GroupService {
     @Override
     @Transactional(readOnly = true)
     public GroupResponse findById(Long id) {
-        return groupMapper.toGroupResponse(groupRepository.findById(id).orElse(null));
+        return groupMapper.toGroupResponse(groupRepository.findById(id).orElseThrow(
+                () -> new NotFoundException("Could not find Group with id: " + id)));
     }
 
     @Override

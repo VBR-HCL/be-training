@@ -1,4 +1,4 @@
-package com.hcl.poc.api.model;
+package com.hcl.poc.api.model.product;
 
 public class ProductCreate {
     private String name;

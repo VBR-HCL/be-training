@@ -1,7 +1,7 @@
 package com.hcl.poc.initializer;
 
-import com.hcl.poc.api.model.GroupCreate;
-import com.hcl.poc.api.model.ProductCreate;
+import com.hcl.poc.api.model.group.GroupCreate;
+import com.hcl.poc.api.model.product.ProductCreate;
 import com.hcl.poc.service.GroupService;
 import com.hcl.poc.service.ProductService;
 import org.springframework.stereotype.Component;

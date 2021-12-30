@@ -1,8 +1,9 @@
 package com.hcl.poc.service.impl;
 
-import com.hcl.poc.api.model.ProductCreate;
-import com.hcl.poc.api.model.ProductResponse;
-import com.hcl.poc.api.model.ProductSearchRequest;
+import com.hcl.poc.api.model.exception.NotFoundException;
+import com.hcl.poc.api.model.product.ProductCreate;
+import com.hcl.poc.api.model.product.ProductResponse;
+import com.hcl.poc.api.model.product.ProductSearchRequest;
 import com.hcl.poc.entity.Product;
 import com.hcl.poc.mapper.ProductMapper;
 import com.hcl.poc.repository.ProductRepository;
@@ -37,7 +38,8 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional(readOnly = true)
     public ProductResponse findById(Long id) {
-        return productMapper.toProductResponse(productRepository.findById(id).orElse(null));
+        return productMapper.toProductResponse(productRepository.findById(id).orElseThrow(
+                () -> new NotFoundException("Could not find Product with id: " + id)));
     }
 
     @Override

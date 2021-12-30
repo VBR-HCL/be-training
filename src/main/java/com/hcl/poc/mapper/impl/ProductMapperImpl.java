@@ -1,7 +1,7 @@
 package com.hcl.poc.mapper.impl;
 
-import com.hcl.poc.api.model.ProductCreate;
-import com.hcl.poc.api.model.ProductResponse;
+import com.hcl.poc.api.model.product.ProductCreate;
+import com.hcl.poc.api.model.product.ProductResponse;
 import com.hcl.poc.entity.Group;
 import com.hcl.poc.entity.Product;
 import com.hcl.poc.mapper.ProductMapper;

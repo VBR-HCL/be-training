@@ -1,7 +1,7 @@
 package com.hcl.poc.api.webservice;
 
-import com.hcl.poc.api.model.ProductResponse;
-import com.hcl.poc.api.model.ProductSearchRequest;
+import com.hcl.poc.api.model.product.ProductResponse;
+import com.hcl.poc.api.model.product.ProductSearchRequest;
 import com.hcl.poc.service.ProductService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

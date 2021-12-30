@@ -1,7 +1,7 @@
 package com.hcl.poc.service;
 
-import com.hcl.poc.api.model.GroupCreate;
-import com.hcl.poc.api.model.GroupResponse;
+import com.hcl.poc.api.model.group.GroupCreate;
+import com.hcl.poc.api.model.group.GroupResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

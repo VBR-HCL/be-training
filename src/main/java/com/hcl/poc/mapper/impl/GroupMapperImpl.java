@@ -1,8 +1,8 @@
 package com.hcl.poc.mapper.impl;
 
-import com.hcl.poc.api.model.GroupCreate;
+import com.hcl.poc.api.model.group.GroupCreate;
 import com.hcl.poc.entity.Group;
-import com.hcl.poc.api.model.GroupResponse;
+import com.hcl.poc.api.model.group.GroupResponse;
 import com.hcl.poc.mapper.GroupMapper;
 import org.springframework.stereotype.Component;
 

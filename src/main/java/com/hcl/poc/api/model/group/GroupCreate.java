@@ -1,8 +1,13 @@
-package com.hcl.poc.api.model;
+package com.hcl.poc.api.model.group;
 
-public class GroupResponse {
+public class GroupCreate {
     private Long id;
     private String name;
+
+    public GroupCreate(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
